@@ -1,11 +1,10 @@
-//local
-
-const john = 'john'
-
-//shere
-const peter = 'peter'
+// local
 const secret = 'SUPER SECRET'
+// share
+const john = 'john'
+const peter = 'peter'
 
-module.exports = {}
-
-console.log(module)
+module.exports = {
+    john,
+    peter
+}
