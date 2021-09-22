@@ -8,4 +8,6 @@ const first = readFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCours
 
 const second = readFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/secundary.txt', 'utf8');
 
-console.log(first, second);
+//console.log(first, second);
+
+writeFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/result.txt', `Here is the result ${first}, ${second}`);
