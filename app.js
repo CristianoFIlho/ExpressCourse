@@ -1,13 +1,11 @@
-/*console.log(__dirname);
-setInterval(() => {
-    console.log('Hello world');
-}, 1000);*/
+const {
+    readFileSync,
+    writeFileSync,
+} = require('fs');
+const fs = require('fs');
 
-const names = require('./4-names');
-const sayHi = require('./5-sayHi');
-const date = require('./6-alternative');
-console.log(date);
+const first = readFileSync('./content/first.txt', 'utf8');
 
-sayHi('susan')
-sayHi(names.john)
-sayHi(names.peter)
+const second = readFileSync('./content/subfolder/secundary.txt', 'utf8');
+
+console.log(first, second);
