@@ -10,5 +10,8 @@ readFile('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/fist.txt
         console.log(err);
         return
     }
-    console.log(result)
+    const secoud = result;
+    readFile('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/result.txt', 'utf8', (err, result) => {
+
+    })
 })
