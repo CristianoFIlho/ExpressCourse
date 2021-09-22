@@ -1,15 +1,14 @@
 const {
-    readFileSync,
-    writeFileSync,
+    readFile,
+    writeFile,
 } = require('fs');
 const fs = require('fs');
 
-const first = readFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/fist.txt', 'utf8');
 
-const second = readFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/secundary.txt', 'utf8');
-
-//console.log(first, second);
-
-writeFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/result.txt', `Here is the result ${first}, ${second}`, {
-    flag: 'a'
-});
+readFile('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/fist.txt', (err, result) => {
+    if (err) {
+        console.log(err);
+        return
+    }
+    console.log(result)
+})
