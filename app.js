@@ -10,4 +10,6 @@ const second = readFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCour
 
 //console.log(first, second);
 
-writeFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/result.txt', `Here is the result ${first}, ${second}`);
+writeFileSync('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/result.txt', `Here is the result ${first}, ${second}`, {
+    flag: 'a'
+});
