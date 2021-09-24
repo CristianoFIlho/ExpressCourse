@@ -1,17 +1,18 @@
-const {
-    readFile,
-    writeFile,
-} = require('fs');
-const fs = require('fs');
+ const http = require('http');
 
+ const server = http.createServer((req, res) => {
+     if (req.url === '/') {
+         res.end('Welcome to our home page');
+     }
+     if (req.url === '/about') {
+         res.end('Welcome to our about page');
+     }
+     res.end(`
+     
+<h1>Opps!!</h1>
+<p>Page not found</p>
 
-readFile('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/fist.txt', (err, result) => {
-    if (err) {
-        console.log(err);
-        return
-    }
-    const secoud = result;
-    readFile('/home/cristianofilho/Desktop/GIT/GitHub/ExpressCourse/content/subfolder/result.txt', 'utf8', (err, result) => {
+     `)
+ });
 
-    })
-})
+ server.listen(5000);
